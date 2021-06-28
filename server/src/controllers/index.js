@@ -17,9 +17,9 @@ exports.getPost = async (req, res, next) => {
 exports.createPost = async (req, res, next) => {
   const data = req.body;
   if (
-    data.username.trim() == "" ||
-    data.topic.trim() == "" ||
-    data.text.trim() == ""
+    data.username.trim() === "" ||
+    data.topic.trim() === "" ||
+    data.text.trim() === ""
   ) {
     return res.status(400).json({
       message: "Failed to create data!",
@@ -40,7 +40,7 @@ exports.createPost = async (req, res, next) => {
 exports.updatePost = async (req, res, next) => {
   const postId = req.params.id;
   const { username, topic, text } = req.body;
-  if (username.trim() == "" || topic.trim() == "" || text.trim() == "") {
+  if (username.trim() === "" || topic.trim() === "" || text.trim() === "") {
     return res.status(400).json({
       message: "Failed to update data!",
     });
