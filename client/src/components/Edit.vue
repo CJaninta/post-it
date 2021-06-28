@@ -70,7 +70,7 @@ export default {
       let text = "Failed to update post !";
       let status_delete = false;
       await axios
-        .put(process.env.VUE_APP_API + "/updatePost/" + id, {
+        .put(process.env.VUE_APP_API_ROOT + "/post/" + id, {
           username: this.username,
           topic: this.topic,
           text: this.text,

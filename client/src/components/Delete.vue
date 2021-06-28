@@ -54,7 +54,7 @@ export default {
       let text = "Failed to delete post !";
       let status_delete = false;
       await axios
-        .delete(process.env.VUE_APP_API + "/deletePost/" + id)
+        .delete(process.env.VUE_APP_API_ROOT + "/post/" + id)
         .then((res) => {
           text = "Delete post !";
           status_delete = true;

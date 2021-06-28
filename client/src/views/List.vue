@@ -20,7 +20,7 @@ export default {
   methods: {
     getPost() {
       axios
-        .get(process.env.VUE_APP_API + "/getPost")
+        .get(process.env.VUE_APP_API_ROOT + "/post")
         .then((res) => {
           const { data } = res;
           this.posts = data.data;

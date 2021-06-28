@@ -81,7 +81,7 @@ export default {
       }
       this.alert_text = "Completely fill information!";
       await axios
-        .post(process.env.VUE_APP_API + "/createPost", {
+        .post(process.env.VUE_APP_API_ROOT + "/post", {
           username: this.username,
           topic: this.topic,
           text: this.text,
